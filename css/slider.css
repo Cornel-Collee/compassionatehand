@@ -1,0 +1,156 @@
+/* Browser Resets */
+.flex-container a,
+.flexslider a,
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {
+    outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* FlexSlider Necessary Styles */
+.flexslider {
+    margin: 0 auto; /* Center the slider */
+    padding: 0;
+    position: relative;
+    width: 100%; /* Ensure it scales responsively */
+    overflow: hidden; /* Prevent splitting */
+}
+
+.flexslider .slides > li {
+    display: inline-block; /* Prevent splitting */
+    -webkit-backface-visibility: hidden;
+    position: relative;
+    text-align: center; /* Center image and caption */
+    margin: 0;
+		width: 100%;
+		height: auto;
+}
+
+.flexslider .slides img {
+    width: 100%;
+		height: auto;
+    display: block;
+    margin: 0 auto; /* Center images */
+}
+
+.flex-caption {
+    font: 600 36px/1.2 'Open Sans', sans-serif;
+    color: #fff;
+    position: absolute;
+    bottom: 10%; /* Position caption at the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.6); /* Add a subtle background for better contrast */
+    border-radius: 5px;
+    z-index: 10; /* Ensure caption is above the image */
+    width: auto; /* Adapt width to text */
+    text-transform: uppercase;
+}
+
+.flex-caption.c2 {
+    background-color: rgba(255, 226, 2, 0.8);
+}
+
+.flex-caption.c3 {
+    background-color: rgba(0, 82, 218, 0.8);
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: none;
+    justify-content: space-between;
+    z-index: 11;
+}
+
+.flex-direction-nav a {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* Control Nav */
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+    z-index: 11;
+}
+
+.flex-control-nav a {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-indent: -999em;
+}
+
+.flex-control-nav a.flex-active {
+    background: #000;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .flexslider {
+        max-width: 100%;
+    }
+
+    .flexslider .slides > li {
+        width: 100%; /* Each slide occupies full width */
+    }
+		.flexslider .slides img {
+			width: 100%; /* Fit images to screen */
+			height: auto;
+	}
+
+    .flex-caption {
+        font-size: 18px;
+        padding: 8px 15px;
+        bottom: 5%; /* Adjust caption position for smaller screens */
+    }
+
+    .flex-direction-nav a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .flexslider .slides > li {
+        width: 50%; /* Two slides per row for tablets */
+    }
+
+    .flex-caption {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .flexslider .slides > li {
+        width: 33.3%; /* Three slides per row for larger screens */
+    }
+
+    .flex-caption {
+        font-size: 28px;
+    }
+}
