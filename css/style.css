@@ -788,14 +788,12 @@ a.link-1:hover {
 }
 
 /* Floating Social Media Icons Styling */
-/* Floating Social Media Icons */
 .social-media {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: flex;
     flex-direction: column; /* Stack icons vertically */
-    gap: 2px; /* Reduced gap to 2px for even closer icons */
     z-index: 9999; /* Ensure they are above other content */
     margin: 0; /* Remove any default margin */
     padding: 0; /* Remove any default padding */
@@ -803,15 +801,16 @@ a.link-1:hover {
 
 .social-icon {
     color: white;
-    padding: 10px; /* Reduced padding to make icons even closer */
+    padding: 8px; /* Further reduced padding to make icons closer */
     border-radius: 50%; /* Round shape */
     text-align: center;
     transition: background-color 0.3s ease;
     display: flex;
     justify-content: center; /* Center icons */
     align-items: center; /* Align icons within the button */
-    width: 60px; /* Set width for consistent size */
-    height: 60px; /* Set height for consistent size */
+    width: 50px; /* Adjusted width for consistent size */
+    height: 50px; /* Adjusted height for consistent size */
+    margin-bottom: -16px; /* Negative margin to bring icons closer */
 }
 
 /* Hover Effect */
@@ -821,16 +820,16 @@ a.link-1:hover {
 
 /* Customize Each Icon Individually */
 
-/* WhatsApp Icon - Remove background */
+/* WhatsApp Icon */
 .social-icon.whatsapp {
-    font-size: 30px; /* Size of WhatsApp icon */
+    font-size: 35px; /* Size of WhatsApp icon */
     color: green;
 }
 
-/* Twitter (X) Icon */
+/* Twitter Icon */
 .social-icon.twitter {
     background-color: #1DA1F2;
-    font-size: 30px; /* Size of Twitter icon */
+    font-size: 35px; /* Size of Twitter icon */
 }
 
 /* Instagram Icon */
@@ -839,17 +838,14 @@ a.link-1:hover {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 30px; /* Adjusted size of Instagram icon */
+    font-size: 35px; /* Adjusted size of Instagram icon */
 }
 
-/* Facebook Icon - Remove background */
+/* Facebook Icon */
 .social-icon.facebook {
-    font-size: 30px; /* Size of Facebook icon */
+    font-size: 35px; /* Size of Facebook icon */
     color: blue;
 }
-
-
-
 .copy strong {
     padding-top: 1px;
     font-size: 18px;
